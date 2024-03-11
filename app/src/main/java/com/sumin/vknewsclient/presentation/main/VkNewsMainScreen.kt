@@ -14,9 +14,8 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.sumin.vknewsclient.navigation.AppNavGraph
 import com.sumin.vknewsclient.navigation.rememberNavigationState
-import com.sumin.vknewsclient.presentation.ViewModelFactory
 import com.sumin.vknewsclient.presentation.comments.CommentsScreen
-import com.sumin.vknewsclient.presentation.getApplicationComponent
+import com.sumin.vknewsclient.presentation.favorites.FavoritesScreen
 import com.sumin.vknewsclient.presentation.news.NewsFeedScreen
 
 @Composable
@@ -77,7 +76,7 @@ fun MainScreen() {
                     feedPost = feedPost
                 )
             },
-            favouriteScreenContent = { TextCounter(name = "Favourite") },
+            favouriteScreenContent = { FavoritesScreen() },
             profileScreenContent = { TextCounter(name = "Profile") }
         )
     }
